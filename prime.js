@@ -1,14 +1,11 @@
-
-let num=3;
-
-let factor=0;
-
-for(let i=1; i<=3; i++){
-if(3%i==0){
-
-factor++;
-
-}
+function checkPrime(num){
+    if(num<2)return false;
+    for(let i = 2;i<= Math.sqrt(num);i++){
+        if(num%i==0)return false;
+    }
+    return true;
+    
 }
 
-(factor==2) ? console.log("prime") : console.log("not a prime number");
+let ans = checkPrime(33);
+console.log(ans);
